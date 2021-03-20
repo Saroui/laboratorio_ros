@@ -1,0 +1,15 @@
+<launch>
+  <arg name="posx"         default="7.0"/>
+  <arg name="posy"         default="7.0"/>
+ 
+  
+  <node pkg= "turtlesim" type="turtlesim_node" name="turtlesim"/>
+  
+<node pkg="rosbag" name="record" type="record" args="-O navegacion.bag turtle1/cmd_vel turtle1/pose"/>
+  
+
+  <node pkg= "lab3_3" type="lab3_3" name="navigation" output ="screen">
+    <param name="posx"       value="$(arg posx)"/>
+    <param name="posy"       value="$(arg posy)"/>
+    
+  </node>
