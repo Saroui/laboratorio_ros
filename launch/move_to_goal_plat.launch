@@ -1,0 +1,6 @@
+<launch>
+
+	<node pkg= "turtlesim" type="turtlesim_node" name="turtlesim"/>
+	<node pkg= "rosbag" name="play" type="play" args="navegacion.bag"/>
+	
+</launch>
