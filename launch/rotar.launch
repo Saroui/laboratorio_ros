@@ -1,0 +1,12 @@
+<launch>
+<arg name="theta" default="0.0"/>
+<arg name="velocity" default="0.0"/>
+  
+<node pkg="turtlesim" type="turtlesim_node" name="turtlesim" />
+  
+<node pkg="laboratorio_ros" type="rotar" name="rotar">
+  <param name="theta" value="$(arg theta)"/>
+  <param name="velocity" value="$(arg velocity)"/>
+</node>
+
+</launch>
