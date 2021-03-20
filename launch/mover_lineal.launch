@@ -1,0 +1,9 @@
+<launch>
+  <arg name="velocity" default="1.0" />
+  
+  <node pkg="turtlesim" type="turtlesim_node" name="turtlesim" />
+  <node pkg="laboratorio_ros" type="square" name="square" >
+    <param name="velocity" value="$(arg velocity)" />
+  </node>
+  <node pkg="laboratorio_ros" type="color" name="color" />
+</launch>
